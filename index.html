@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Staff Minecraft - Charlie Roleplay</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Pulsante Modalità Modifica -->
+    <div class="edit-toggle">
+        <button id="editModeBtn" class="edit-btn">
+            <i class="fas fa-edit"></i> Modalità Modifica
+        </button>
+        <button id="logoutBtn" class="edit-btn" style="margin-top: 10px; display: none;">
+            <i class="fas fa-sign-out-alt"></i> Logout
+        </button>
+    </div>
+
+    <!-- Gestore delle sezioni -->
+    <div id="sectionManager" class="section-manager">
+        <h3>Gestione Sezioni</h3>
+        <div class="section-list">
+            <h4>Sezioni Attive</h4>
+            <ul id="activeSectionsList">
+                <!-- Le sezioni attive verranno inserite qui dinamicamente -->
+            </ul>
+        </div>
+        <div class="section-add">
+            <h4>Aggiungi Sezione</h4>
+            <select id="addSectionSelect">
+                <option value="" disabled selected>Seleziona una sezione da aggiungere</option>
+                <!-- Le opzioni verranno inserite qui dinamicamente -->
+            </select>
+        </div>
+    </div>
+
+    <!-- Color Picker -->
+    <div class="color-picker-container">
+        <div class="color-picker-title">Personalizza Colori</div>
+        <div class="color-option">
+            <label for="color-primary-color">Primary</label>
+            <input type="color" id="color-primary-color" value="#4CAF50">
+        </div>
+        <div class="color-option">
+            <label for="color-secondary-color">Secondary</label>
+            <input type="color" id="color-secondary-color" value="#8BC34A">
+        </div>
+        <div class="color-option">
+            <label for="color-dark-color">Dark</label>
+            <input type="color" id="color-dark-color" value="#2E7D32">
+        </div>
+        <div class="color-option">
+            <label for="color-light-color">Light</label>
+            <input type="color" id="color-light-color" value="#C8E6C9">
+        </div>
+        <div class="color-option">
+            <label for="color-text-color">Text</label>
+            <input type="color" id="color-text-color" value="#333333">
+        </div>
+        <div class="color-option">
+            <label for="color-background-color">Background</label>
+            <input type="color" id="color-background-color" value="#f9f9f9">
+        </div>
+        <button class="btn btn-primary save-colors-btn" id="saveColorsBtn">Salva Colori</button>
+    </div>
+
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo editable" data-edit="text">MC<span>Portfolio</span></div>
+                <ul class="nav-links" id="navLinks">
+                    <!-- I link di navigazione verranno inseriti qui dinamicamente -->
+                </ul>
+                <div class="burger" id="burger">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Sezione Home -->
+    <section id="home" class="hero section-container" data-section-id="home">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="editable" data-edit="text">Staff <span>Minecraft</span></h1>
+                    <h2 class="editable" data-edit="text">Charlie Roleplay</h2>
+                    <p class="editable" data-edit="text">Benvenuto nel mio portfolio professionale che mostra la mia esperienza come membro dello staff sul server Minecraft Charlie Roleplay.</p>
+                    <div class="hero-btns">
+                        <a href="#esperienza" class="btn btn-primary">Scopri di più</a>
+                        <a href="#contatti" class="btn btn-secondary">Contattami</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="profile-img editable" data-edit="image" style="background-image: url('https://via.placeholder.com/350')"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sezione Esperienza -->
+    <section id="esperienza" class="experience section-container" data-section-id="esperienza">
+        <div class="container">
+            <h2 class="section-title editable" data-edit="text">La Mia Esperienza</h2>
+            <div class="timeline editable-container" data-edit="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3 class="editable" data-edit="text">Moderatore - Charlie Roleplay</h3>
+                        <span class="date editable" data-edit="text">2022 - Presente</span>
+                        <p class="editable" data-edit="text">Gestione delle segnalazioni dei giocatori, monitoraggio della chat e risoluzione dei conflitti. Applicazione delle regole del server e mantenimento di un ambiente di gioco positivo.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <div class="timeline-content right">
+                        <h3 class="editable" data-edit="text">Helper - Charlie Roleplay</h3>
+                        <span class="date editable" data-edit="text">2021 - 2022</span>
+                        <p class="editable" data-edit="text">Assistenza ai nuovi giocatori, risposta alle domande nella chat e supporto generale alla community. Collaborazione con il team di moderazione per identificare problemi e migliorare l'esperienza di gioco.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3 class="editable" data-edit="text">Sviluppatore Plugin - Charlie Roleplay</h3>
+                        <span class="date editable" data-edit="text">2020 - 2021</span>
+                        <p class="editable" data-edit="text">Creazione e manutenzione di plugin personalizzati per migliorare l'esperienza roleplay sul server. Implementazione di nuove funzionalità e correzione di bug.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sezione Competenze -->
+    <section id="competenze" class="skills section-container" data-section-id="competenze">
+        <div class="container">
+            <h2 class="section-title editable" data-edit="text">Le Mie Competenze</h2>
+            <div class="skills-container editable-container" data-edit="skills">
+                <div class="skill-box" data-skill-id="1">
+                    <div class="skill-title">
+                        <div class="skill-img">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3 class="editable" data-edit="text">Gestione Community</h3>
+                    </div>
+                    <div class="skill-bar">
+                        <span class="skill-per editable" data-edit="skill" style="width: 90%;">
+                            <span class="tooltip">90%</span>
+                        </span>
+                    </div>
+                    <div class="skill-actions">
+                        <button class="delete-skill"><i class="fas fa-trash"></i></button>
+                        <button class="edit-skill"><i class="fas fa-pen"></i></button>
+                    </div>
+                </div>
+                <div class="skill-box" data-skill-id="2">
+                    <div class="skill-title">
+                        <div class="skill-img">
+                            <i class="fas fa-gavel"></i>
+                        </div>
+                        <h3 class="editable" data-edit="text">Moderazione</h3>
+                    </div>
+                    <div class="skill-bar">
+                        <span class="skill-per editable" data-edit="skill" style="width: 85%;">
+                            <span class="tooltip">85%</span>
+                        </span>
+                    </div>
+                    <div class="skill-actions">
+                        <button class="delete-skill"><i class="fas fa-trash"></i></button>
+                        <button class="edit-skill"><i class="fas fa-pen"></i></button>
+                    </div>
+                </div>
+                <div class="skill-box" data-skill-id="3">
+                    <div class="skill-title">
+                        <div class="skill-img">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3 class="editable" data-edit="text">Plugin Minecraft</h3>
+                    </div>
+                    <div class="skill-bar">
+                        <span class="skill-per editable" data-edit="skill" style="width: 75%;">
+                            <span class="tooltip">75%</span>
+                        </span>
+                    </div>
+                    <div class="skill-actions">
+                        <button class="delete-skill"><i class="fas fa-trash"></i></button>
+                        <button class="edit-skill"><i class="fas fa-pen"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="add-skill-container">
+                <button id="addSkillBtn" class="btn btn-primary">
+                    <i class="fas fa-plus"></i> Aggiungi Competenza
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sezione Progetti -->
+    <section id="progetti" class="projects section-container" data-section-id="progetti">
+        <div class="container">
+            <h2 class="section-title editable" data-edit="text">I Miei Progetti</h2>
+            <div class="projects-grid editable-container" data-edit="projects">
+                <div class="project-card">
+                    <div class="project-img editable" data-edit="image" style="background-image: url('https://via.placeholder.com/400x300')"></div>
+                    <div class="project-content">
+                        <h3 class="editable" data-edit="text">Sistema Economia Roleplay</h3>
+                        <p class="editable" data-edit="text">Sviluppo di un sistema economico completo per il server con lavori, negozi e banche.</p>
+                        <div class="project-tags">
+                            <span class="editable" data-edit="text">Plugin</span>
+                            <span class="editable" data-edit="text">Economia</span>
+                            <span class="editable" data-edit="text">Roleplay</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-img editable" data-edit="image" style="background-image: url('https://via.placeholder.com/400x300')"></div>
+                    <div class="project-content">
+                        <h3 class="editable" data-edit="text">Eventi Speciali</h3>
+                        <p class="editable" data-edit="text">Organizzazione e gestione di eventi tematici mensili con premi e attività per la community.</p>
+                        <div class="project-tags">
+                            <span class="editable" data-edit="text">Eventi</span>
+                            <span class="editable" data-edit="text">Community</span>
+                            <span class="editable" data-edit="text">Gestione</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sezione Testimonianze -->
+    <section id="testimonianze" class="testimonials section-container" data-section-id="testimonianze">
+        <div class="container">
+            <h2 class="section-title editable" data-edit="text">Testimonianze</h2>
+            <div class="testimonial-container">
+                <div class="testimonial-card">
+                    <div class="testimonial-text editable" data-edit="text">Un moderatore eccezionale che ha sempre mantenuto l'ordine nel server con professionalità e pazienza. Grazie al suo lavoro, la nostra community è diventata un luogo accogliente per tutti i giocatori.</div>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar editable" data-edit="image" style="background-image: url('https://via.placeholder.com/100')"></div>
+                        <div class="testimonial-info">
+                            <h4 class="editable" data-edit="text">Marco Rossi</h4>
+                            <p class="editable" data-edit="text">Proprietario del Server</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-text editable" data-edit="text">I plugin sviluppati hanno trasformato completamente l'esperienza di gioco. Innovativi, stabili e perfettamente integrati con il tema roleplay del server.</div>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar editable" data-edit="image" style="background-image: url('https://via.placeholder.com/100')"></div>
+                        <div class="testimonial-info">
+                            <h4 class="editable" data-edit="text">Laura Bianchi</h4>
+                            <p class="editable" data-edit="text">Admin del Server</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sezione Risultati -->
+    <section id="risultati" class="achievements section-container" data-section-id="risultati">
+        <div class="container">
+            <h2 class="section-title editable" data-edit="text">Risultati</h2>
+            <div class="achievements-container">
+                <div class="achievement-item">
+                    <div class="achievement-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="achievement-number editable" data-edit="text">500+</div>
+                    <div class="achievement-title editable" data-edit="text">Giocatori Assistiti</div>
+                </div>
+                <div class="achievement-item">
+                    <div class="achievement-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div class="achievement-number editable" data-edit="text">15</div>
+                    <div class="achievement-title editable" data-edit="text">Plugin Sviluppati</div>
+                </div>
+                <div class="achievement-item">
+                    <div class="achievement-icon">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <div class="achievement-number editable" data-edit="text">30+</div>
+                    <div class="achievement-title editable" data-edit="text">Eventi Organizzati</div>
+                </div>
+                <div class="achievement-item">
+                    <div class="achievement-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div class="achievement-number editable" data-edit="text">3</div>
+                    <div class="achievement-title editable" data-edit="text">Premi Staff</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sezione Galleria -->
+    <section id="galleria" class="gallery section-container" data-section-id="galleria">
+        <div class="container">
+            <h2 class="section-title editable" data-edit="text">Galleria</h2>
+            <div class="gallery-container">
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/600x400" alt="Immagine Galleria" class="gallery-image editable" data-edit="image">
+                    <div class="gallery-overlay">
+                        <h3 class="gallery-title editable" data-edit="text">Evento Estivo</h3>
+                        <p class="gallery-description editable" data-edit="text">Grande evento estivo con più di 100 partecipanti</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/600x400" alt="Immagine Galleria" class="gallery-image editable" data-edit="image">
+                    <div class="gallery-overlay">
+                        <h3 class="gallery-title editable" data-edit="text">Costruzione Città</h3>
+                        <p class="gallery-description editable" data-edit="text">Progetto di costruzione collaborativa della città principale</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/600x400" alt="Immagine Galleria" class="gallery-image editable" data-edit="image">
+                    <div class="gallery-overlay">
+                        <h3 class="gallery-title editable" data-edit="text">Riunione Staff</h3>
+                        <p class="gallery-description editable" data-edit="text">Incontro mensile dello staff per pianificare nuove attività</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sezione Contatti -->
+    <section id="contatti" class="contact section-container" data-section-id="contatti">
+        <div class="container">
+            <h2 class="section-title editable" data-edit="text">Contattami</h2>
+            <div class="contact-container">
+                <div class="contact-info editable-container" data-edit="contacts">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3 class="editable" data-edit="text">Email</h3>
+                            <p class="editable" data-edit="text">tuaemail@esempio.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-discord"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3 class="editable" data-edit="text">Discord</h3>
+                            <p class="editable" data-edit="text">TuoUsername#0000</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-minecraft"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3 class="editable" data-edit="text">Minecraft</h3>
+                            <p class="editable" data-edit="text">TuoUsernameMinecraft</p>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" placeholder="Nome" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="Oggetto" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Messaggio" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Invia Messaggio</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="logo editable" data-edit="text">MC<span>Portfolio</span></div>
+                    <p class="editable" data-edit="text">Portfolio professionale per staff Minecraft</p>
+                </div>
+                <div class="footer-links">
+                    <h3 class="editable" data-edit="text">Collegamenti Rapidi</h3>
+                    <ul id="footerLinks">
+                        <!-- I link di navigazione verranno inseriti qui dinamicamente -->
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h3 class="editable" data-edit="text">Social</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-discord"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-twitch"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="editable" data-edit="text">&copy; 2025 Portfolio Staff Minecraft. Tutti i diritti riservati.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modali -->
+    <!-- Modal di Autenticazione -->
+    <div id="authModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" id="closeAuthModal">&times;</span>
+            <h2>Accesso Richiesto</h2>
+            <div class="edit-form">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" placeholder="Inserisci username">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Inserisci password">
+                </div>
+                <div id="authError" style="color: red; margin-bottom: 15px; display: none;"></div>
+                <button class="btn btn-primary" id="loginBtn">Accedi</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal di Modifica Testo -->
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" id="closeEditModal">&times;</span>
+            <h2>Modifica Contenuto</h2>
+            <div class="edit-form">
+                <textarea id="editContent"></textarea>
+                <button class="btn btn-primary" id="saveEditBtn">Salva</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal di Modifica Competenza -->
+    <div id="skillModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" id="closeSkillModal">&times;</span>
+            <h2>Modifica Competenza</h2>
+            <div class="edit-form">
+                <div class="form-group">
+                    <label for="skillName">Nome Competenza</label>
+                    <input type="text" id="skillName">
+                </div>
+                <div class="form-group">
+                    <label for="skillIcon">Icona (classe Font Awesome)</label>
+                    <input type="text" id="skillIcon" placeholder="fa-users">
+                </div>
+                <div class="form-group">
+                    <label for="skillLevel">Livello (0-100%)</label>
+                    <input type="range" id="skillLevel" min="0" max="100" value="75">
+                    <span id="skillLevelValue">75%</span>
+                </div>
+                <button id="saveSkillBtn" class="btn btn-primary">Salva</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal di Nuova Competenza -->
+    <div id="newSkillModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" id="closeNewSkillModal">&times;</span>
+            <h2>Aggiungi Nuova Competenza</h2>
+            <div class="edit-form">
+                <div class="form-group">
+                    <label for="newSkillName">Nome Competenza</label>
+                    <input type="text" id="newSkillName" placeholder="Es. Sviluppo Web">
+                </div>
+                <div class="form-group">
+                    <label for="newSkillIcon">Icona (classe Font Awesome)</label>
+                    <input type="text" id="newSkillIcon" placeholder="fa-code">
+                </div>
+                <div class="form-group">
+                    <label for="newSkillLevel">Livello (0-100%)</label>
+                    <input type="range" id="newSkillLevel" min="0" max="100" value="75">
+                    <span id="newSkillLevelValue">75%</span>
+                </div>
+                <button id="addNewSkillBtn" class="btn btn-primary">Aggiungi</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notifica di salvataggio -->
+    <div id="saveNotification" class="notification">
+        <i class="fas fa-check-circle"></i> Modifiche salvate con successo!
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
